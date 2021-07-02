@@ -12,5 +12,6 @@ This is very to be exact website only does what it meant to be without wasting t
 
 ## Any Suggestions
 
- If you have any suggestions or you want to help on something make sure to create an issue.
+If you have any suggestions or you want to help on something make sure to create an issue.
+
 You can also create a pull request i'll try to merge it asap.
