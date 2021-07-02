@@ -1,9 +1,16 @@
-# Age in Months-Days
+# Age In Months-Days
+Hi i am **Jitesh**. This is a simple website to check your age in years, months and days.
+>  Do let me know if you have any idea on what should i create next
 
-# Get your age in months and days
+>  I know basics Python, JavaScript and lil bit Kotlin-Java for Android Dev
 
-This is a very simple website to check your age in Years then months and days
-I know this too simple but this one is a easy and effective way to create such thing
+## My first repo
 
-Let me know if the code has any drawbacks or create a pull request
-I'll try to merge it asap ✌️
+This is my first contribution to **open source**. I tried to built something simple to get my hands on this **world**.
+
+This is very to be exact website only does what it meant to be without wasting time.
+
+## Any Suggestions
+
+ If you have any suggestions or you want to help on something make sure to create an issue.
+You can also create a pull request i'll try to merge it asap.
