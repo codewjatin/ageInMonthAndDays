@@ -1,20 +1,43 @@
-dobInput = document.getElementById('dob')
-dt = new Date()
+function fnCalculateAge(userDateinput){
+    // convert user input value into date object
+    let birthDate = new Date(userDateinput);
 
-dobInput.value = "2004-04-14"
+    // get difference from current date;
+    let difference = Date.now() - birthDate.getTime();
 
-document.getElementById('body').onselectstart = function () {
-    return false
+    let ageDate = new Date(difference);
+    let calculatedAge = {
+        'inYears': Math.abs(ageDate.getUTCFullYear() - 1970),
+        'inMonths': ageDate.getMonth()
+    }
+
+    // Calculating the days
+    userDob = (userDateinput.split('-')).map(Number)
+    console.log(userDob);
+    calcDate = userDateinput.split('-')
+    calcDate[0] = new Date().getUTCFullYear()
+    if (new Date(calcDate.join('-')).getTime() - new Date(userDateinput).getTime() < Date.now() - new Date(userDateinput).getTime()){
+        userDob[0] = new Date().getUTCFullYear()
+    } else {
+        userDob[0] = new Date().getUTCFullYear()
+    }
+    console.log(userDob);
+    userDob[1] += calculatedAge.inMonths
+    if (userDob[1] > 12){
+        userDob[1] -= 12
+    }
+    userDob[1] = String(userDob[1])
+    if (userDob[1].length < 2){
+        userDob[1] = userDob[1].replace(userDob[1], '0' + userDob[1])
+    }
+    let timeForDay = ((Date.now() - new Date(userDob.join('-')).getTime()))
+    calculatedAge.inDays = Math.round(timeForDay / 1000 / 60 / 60 / 24)
+
+    let returnStat = `You are ${calculatedAge.inYears} years, ${calculatedAge.inMonths} months and ${calculatedAge.inDays} days.`
+    return returnStat
 }
 
-inputField = document.getElementById('submitDOB')
-resultPage = document.getElementById('result')
-
-inputField.addEventListener('click', function (){
-    userDOB = dobInput.value.split('-')
-    ageYear = dt.getUTCFullYear() - Number(userDOB[0])
-    ageMonth = Math.abs(dt.getUTCMonth() + 1 - Number(userDOB[1]))
-    ageDay = Math.abs(dt.getUTCDate() - Number(userDOB[2]))
-
-    resultPage.textContent = `You are ${ageYear} years, ${ageMonth} months and ${ageDay} days old`
-})
+function showResult(){
+    userDOB = document.getElementById('dob').value
+    document.getElementById('result').textContent = fnCalculateAge(userDOB)
+}
