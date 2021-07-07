@@ -4,6 +4,10 @@ Hi i am **Jitesh**. This is a simple website to check your age in years, months 
 
 >  I know basics Python, JavaScript and lil bit Kotlin-Java for Android Dev
 
+## Check the website
+
+https://jitesh-pradhan.github.io/Age-In-Months-Days/
+
 ## My first repo
 
 This is my first contribution to **open source**. I tried to built something simple to get my hands on this **world**.
