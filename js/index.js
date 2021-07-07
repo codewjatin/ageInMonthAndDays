@@ -38,6 +38,10 @@ function fnCalculateAge(userDateinput){
 }
 
 function showResult(){
-    userDOB = document.getElementById('dob').value
-    document.getElementById('result').textContent = fnCalculateAge(userDOB)
+    if (document.getElementById('dob').value != ''){
+        userDOB = document.getElementById('dob').value
+        document.getElementById('result').textContent = fnCalculateAge(userDOB)
+    } else {
+        window.alert('Please enter date.')
+    }
 }
